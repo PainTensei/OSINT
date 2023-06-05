@@ -1,0 +1,2 @@
+# OSINT
+graduation project scripts
