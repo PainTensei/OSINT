@@ -1,5 +1,3 @@
-# for power bi:
-# py -m pip install pandas, matplotlib, requests, shodan, python-whois, beautifulsoup4
 import socket
 import urllib.parse
 import subprocess
@@ -101,11 +99,3 @@ else:
     # Get the URL of the most recent archived snapshot
     snapshot_url = data['archived_snapshots']['closest']['url']
     print(f"Most recent snapshot: {snapshot_url}")
-
-# Shodan
-# api_key = "LEehS1398exXggIEL2NMw2RduwkLZbJZ"
-# api = shodan.Shodan(api_key)
-# results = api.host(ip_address)
-# print(results)
-
-# Dorks
