@@ -1,31 +1,20 @@
 #!/usr/bin/env python
+import subprocess
+packages = ['requests', 'shodan', 'flask', 'python-whois', 'beautifulsoup4', 'easygui']
+for package in packages:
+    try:
+        __import__(package)
+    except ImportError:
+        subprocess.call(['pip', 'install', package])
 import socket
 import json
 import urllib.parse
-import subprocess
-try:import requests
-except ImportError:
-    subprocess.call(['pip', 'install', 'requests'])
 import requests
-try:import shodan
-except ImportError:
-    subprocess.call(['pip', 'install', 'shodan'])
 import shodan
-try:import flask
-except ImportError:
-    subprocess.call(['pip', 'install', 'flask'])
-try:import whois
-except ImportError:
-    subprocess.call(['pip', 'install', 'python-whois'])
+import flask
 import whois
-try:import bs4
-except ImportError:
-    subprocess.call(['pip', 'install', 'beautifulsoup4'])
-from bs4 import BeautifulSoup
-try:import easygui
-except ImportError:
-    subprocess.call(['pip', 'install', 'easygui'])
 import easygui
+from bs4 import BeautifulSoup
 from flask import Flask, request, render_template_string
 
 app = Flask(__name__)
