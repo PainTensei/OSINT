@@ -48,7 +48,8 @@ domain_info = whois.whois(domain_name)
 
 # DNS
 print(f"DNS Information:")
-for dns in domain_info.name_servers:
+dns_entries = domain_info.name_servers
+for dns in dns_entries:
     print(f"\t{dns}")
 
 # Crawler

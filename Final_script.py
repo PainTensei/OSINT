@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import subprocess
-packages = ['requests', 'shodan', 'flask', 'python-whois', 'beautifulsoup4', 'easygui']
+packages = ['requests', 'python-nmap', 'flask', 'python-whois', 'beautifulsoup4', 'easygui']
 for package in packages:
     try:
         __import__(package)
@@ -10,9 +10,9 @@ import socket
 import json
 import urllib.parse
 import requests
-import shodan
 import flask
 import whois
+import nmap
 import easygui
 from bs4 import BeautifulSoup
 from flask import Flask, request, render_template_string
@@ -114,6 +114,9 @@ def dashboard():
         # Get the URL of the most recent archived snapshot
         snapshot_url = data['archived_snapshots']['closest']['url']
         print(f"Most recent snapshot: {snapshot_url}")
+    
+    #nmap
+    
 
     # Push data to localhost
     data_to_push = {
