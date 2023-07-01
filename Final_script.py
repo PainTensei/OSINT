@@ -185,16 +185,19 @@ def dashboard():
 <hr>
     <div class="wrapper">
         <div class="box">
+            <img style="width:30%;" src="https://cdn.discordapp.com/attachments/717788503437475942/1124830869291532379/url.png">
             <h2>Target URL</h2>
             <p><a target="_blank" href="https://{{ data['Target'] }}">{{ data['Target'] }}</a></p>
         </div>
 
         <div class="box">
+            <img style="width:30%;" src="https://cdn.discordapp.com/attachments/717788503437475942/1124831103472115844/ip-address.png">
             <h2>IP address</h2>
             <p>{{ data['ip_address'] }}</p>
         </div>
 
         <div class="box">
+            <img style="width:30%;" src="https://cdn.discordapp.com/attachments/717788503437475942/1124831332317548565/brand.png">
             <h2>DNS Information</h2>
             <ul>
                 {% for dns_entry in data['DNS'] %}
@@ -203,10 +206,11 @@ def dashboard():
             </ul>
         </div>
         <div class="box">
+            <img style="width:1.5%;" src="https://cdn.discordapp.com/attachments/717788503437475942/1124831652187750420/link.png">
             <h2>Hyperlinks</h2>
             <ul>
                 {% for hyperlinks in data['hyperlinks'] %}
-                    <li>{{ hyperlinks }}</li>
+                    <li><a>{{ hyperlinks }}</a></li>
                 {% endfor %}
             </ul>
         </div>
@@ -223,7 +227,7 @@ def dashboard():
 
         <div class="box">
             <h2>Location</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2485.5244548754!2d5.472948212515854!3d51.46688701354419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6d9217ea6d109%3A0xd7e03cd66dd3d7cd!2sWooninc.!5e0!3m2!1sen!2snl!4v1685409470783!5m2!1sen!2snl" width="300" height="300" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19891.551486089418!2d5.4692360999567375!3d51.45000522031677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6d92199730073%3A0x1c98f3a0d8ee087b!2sFontys!5e0!3m2!1sen!2snl!4v1688247585769!5m2!1sen!2snl" width="300" height="300" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
 </body>
 </html>
